@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <!-- 日期选择器begin -->
+    <style>
+
+
+        .demo-input {
+            padding-left: 10px;
+            height: 38px;
+            min-width: 262px;
+            line-height: 38px;
+            border: 1px solid #e6e6e6;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+
+        .demo-footer {
+            padding: 50px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .demo-footer a {
+            padding: 0 5px;
+            color: #01AAED;
+        }
+
+
+    </style>
+    <!-- 日期选择器end -->
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-table.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.min.js"></script>
+	<script src="js/bootstrap-table-zh-CN.min.js"></script>
+
+
+
+
+<!--------------------------  头部导航栏begin  ------------------------------>
+
+
+
+<!--------------------------  头部导航栏end  ------------------------------>
+
+<div class="container-fluid">
+    
+
+            <!-- 人员列表 begin-->
+
+            <!--例子应该很好看懂Table options和Column options 所放的位置不同，随便写的，主要为了懂得如何用-->
+
+ <table id="realTime_Table" data-click-to-select="true" class="table table-bordered" data-page-size="20">
+      <thead>
+          <tr >
+              <th data-sortable="true" data-field="realTimeDate">日期</th>
+              <th data-sortable="true" data-field="newPlayerNum">新增用户</th>
+              <th data-sortable="true" data-field="activePlayerNum">活跃用户</th>
+          </tr>
+      </thead>
+      <tbody>
+		  
+      </tbody>
+</table>
+
+      
+</div>
+
+
+<!-- 人员列表 end -->
+
+
+<script>
+
+$("#realTime_Table").bootstrapTable({
+  	  search: true,
+      pagination: false,
+      pageSize: 15,
+      pageList: [5, 10, 15, 20],
+      showColumns: true,
+      showRefresh: false,
+      showToggle: true,
+      locale: "zh-CN",
+	  striped: true,
+	  data: [{
+
+        realTimeDate: 1,
+
+        newPlayerNum: 'Item 1',
+
+        activePlayerNum: '$1'
+
+    }, {
+
+        realTimeDate: 2,
+
+        newPlayerNum: 'Item 2',
+
+        activePlayerNum: '$2'
+
+    }]
+});  
+
+</script>
+</body>
+
+</html>

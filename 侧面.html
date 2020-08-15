@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+     @font-face{
+    font-family:'myFirstFont';
+    src:url('./fonts/ZaoZiGongFangYingLiHeiGuiTi-1.otf') format('truetype');
+}
+
+
+
+
+.aside-header{
+    height: 100px;
+    line-height: 100px;
+}
+.aside-header p{
+    font-family: 'myFirstFont';
+
+    text-decoration:none;
+    color:rgb(23, 55, 94);
+    display: block;
+    font-size: 32px;
+}
+.link-right {
+            width: 50px;
+            height: 20%;
+            border-right: solid #ACC0D8 1px;
+        }
+body{
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('imgs/back-dark.png');
+}
+
+
+
+.bread-nofirst{
+    font-family: 'myFirstFont';
+    font-size: 16px;
+
+color:rgb(23, 55, 94);
+}
+.first-page{
+    font-family: 'myFirstFont';
+    font-size: 16px;
+
+    color:rgb(80, 130,190);
+}
+.submit-button{
+    /* background-color: rgb(80,130, 190); */
+    /* background-image:liner-gradient(to right,red,black); */
+    background-image: linear-gradient(to right,rgb(23,55,94), rgb(80,130,190), rgb(30,70,120));
+    width: 70%;
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<div class="test bread-nofirst ">
+    当前位置:
+
+</div>
+<div class="test first-page">
+    首页
+</div>
+
+<div class="test" style="text-align: center;">
+    <button class="btn submit-button" >
+        提交
+    </button>
+</div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <aside class="main-sidebar aside">
+                    <div class="text-center aside-header" >
+                        <p href="#" class="first_menu ">
+                            管理员 欢迎您
+                        </p>
+                    </div>
+                    <div class="row" style="line-height: 50px;">
+                        <p>
+                        <div class="btn-group-vertical" style="width: 100%;">
+                            <ul style="width: 100%;padding-inline-start: 0;">
+                                <li class="text-center">
+
+                                    <a class="center first_menu " role="button" data-toggle="collapse"
+                                        data-target="#collapseExample1" aria-expanded="false"
+                                        aria-controls="collapseExample1" 
+                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125); margin-top: 5px;"
+                                        >
+                                        <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
+
+                                        通知管理
+                                        <img src="imgs/line-dark.png" style="margin-left: 8px;" alt="">
+                                    </a>
+
+
+                                    <div class="collapse second_menu" id="collapseExample1">
+                                        <ul style="padding-inline-start: 0;">
+                                            <li class="text-center">
+                                                <a href="#" class=""
+                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                    发布通知
+                                                </a>
+
+                                            </li>
+
+
+
+                                            <li class="text-center">
+                                                <a href="#"
+                                                    class="" 
+                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                    我发布的
+
+                                                </a>
+
+                                            </li>
+
+                                            <li class="text-center">
+                                                <a href="#"
+                                                    class="" 
+                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                    收到通知
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="text-center">
+                                    <a class="center first_menu " role="button" data-toggle="collapse"
+                                        data-target="#collapseExample2" aria-expanded="false"
+                                        aria-controls="collapseExample2" 
+                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
+                                        >
+                                        <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
+
+                                        成员管理
+
+                                        <img src="imgs/line-dark.png" style="margin-left: 8px;" alt="">
+                                    </a>
+
+                                    <div class="collapse second_menu" id="collapseExample2">
+                                        <ul style="padding-inline-start: 0;">
+                                            <c:if test="${sessionScope.member.power ne 'p2'}">
+                                                <li class="text-center">
+                                                    <a href="#"
+                                                        class=""
+                                                        style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                        新增成员
+
+                                                    </a>
+
+                                                </li>
+                                                <li class="text-center">
+                                                    <a href="#"
+                                                        class=""
+                                                        style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                        成员列表
+
+                                                    </a>
+
+                                                </li>
+                                            </c:if>
+
+                                            <li class="text-center">
+                                                <a href="#"
+                                                style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                我的组员
+                                                </a>
+
+                                            </li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#"
+                                        class="center first_menu " role="button"
+                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
+                                        >
+                                        <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
+
+                                        修改密码
+                                        <img src="imgs/line-dark.png" style="margin-left: 8px;" alt="">
+
+                                    </a>
+
+                                </li>
+                                <li class="text-center">
+                                    <a href="${pageContext.request.contextPath}/member/logout.do"
+                                        class="center first_menu " role="button"
+                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
+                                        >
+                                        <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
+
+                                        登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出
+                                        <img src="imgs/line-dark.png" style="margin-left: 8px;" alt="">
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+
+
+                        </div>
+                        </p>
+
+
+                    </div>
+                </aside>
+            </div>
+            <div class="col-10" style="height: 1000px;width: 1000px;">
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

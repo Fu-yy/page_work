@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/mycss/pages.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <div class="container">
+
+        <div class="card form">
+            <div class="card-header">
+                <h3>通知内容</h3>
+            </div>
+            <br>
+            <div class="card-body">
+
+                <p class="text-monospace">This is in monospace</p>
+
+            </div>
+
+
+            <div class="card-header">
+                <h3>发起人</h3>
+            </div>
+            <br>
+            <div class="card-body">
+
+                <p class="text-monospace">This is in monospace</p>
+
+            </div>
+
+
+            <div class="card-header">
+                <h3>发布时间</h3>
+            </div>
+            <br>
+            <div class="card-body">
+
+                <p class="text-monospace">This is in monospace</p>
+
+            </div>
+
+
+            <div class="card-header">
+                <h3>截止时间</h3>
+            </div>
+            <br>
+            <div class="card-body">
+
+                <p class="text-monospace">This is in monospace</p>
+
+            </div>
+        </div>
+                  <div class="card">
+                    <div class="card-body" >
+                            <form id="result_form">
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label" for="msgTextArea">
+                                        <h3>工号/学号 </h3>
+                                    </label>
+                                    <div class="col-lg-10" style="margin: auto;">
+                                         <input class="form-control" id="memberNo" name="memberNo" placeholder="请输入工号/学号"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <h3 class="col-lg-2 ">反馈意见</h3>
+
+
+                                    <div class="col-lg-10" style="margin: auto;">
+                                        <div class="form-check form-check-inline row">
+                                            <div class="col-6">
+                                                <label class="form-check-label" for="agree">可以按要求参加</label>
+                                                <input class="form-check-input" type="radio" name="result"
+                                                       checked="checked"
+                                                       id="agree" value="1">
+                                            </div>
+                                            
+
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col-6"style="margin: auto;">
+                                                        <label class="form-check-label" for="disagree">无法参加</label>
+                                                        <input class="form-check-input" type="radio" name="result"
+                                                               id="disagree"
+                                                               value="2">
+                                                            </div>
+                                                    <div class="col-6">
+                                                <input disabled="disabled" type="text" name="reason" id="reason" placeholder="请输入原因">
+
+                                                    </div>
+
+                                                </div>
+                                                
+
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div style="text-align: center;">
+                                    <button type="button" form="result_form" id="submit_btn" disabled="disabled"
+                                    class="btn btn-general btn-white">提交</button>
+                                </div>
+                               
+
+
+                  
+                            </form>
+                    </div>
+                </div>
+    </div>
+
+    <script>
+
+        $("#disagree").click(function(){
+            $("#reason").removeAttr("disabled");
+        });
+        $("#agree").click(function(){
+            $("#reason").attr("disabled","disabled");
+        });
+
+
+        $("#memberNo").change(function(){
+            $("#submit_btn").removeAttr("disabled");
+        });
+        $("#submit_btn").click(function(){
+            var memberNo = $("#memberNo").val();
+            if(memberNo==="" || memberNo == null){
+                alert("请输入工号/学号，否则无法提交。");
+                $("#submit_btn").attr("disabled","disabled");
+            }
+
+            var result = $('input:radio:checked').val();
+
+            var reason = $("#reason").val();
+
+            var msgId = $("#msgId");
+
+            if(result == 2){
+                if(reason === ""|| reason == null){
+                    alert("请输入理由，否则无法提交。");
+                    $("#submit_btn").attr("disabled","disabled");
+                }
+                console.log("000000000");
+            }
+
+            if(confirm("您的工号是:"+memberNo+",确定提交吗？") == true){
+                // var formData = new FormData($("#outMsg_form")[0]);
+                $.ajax({
+                    url:$,
+                    type:"post",
+                    data:,
+                    dataType:"json",
+                    contentType: false, //必须false才会自动加上正确的Content-Type
+                    processData: false,  //必须false才会避开jQuery对 formdata 的默认处理
+                    success:function(res){
+
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

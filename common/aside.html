@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<aside class="main-sidebar">
+    <div class="text-center" style="height: 50px;line-height: 50px;">
+        <a href="#" style="text-decoration: none;color: white;display: block;" class="font-weight-bold">**后台</a>
+    </div>
+    <div class="row">
+        <div style="height: 1px;background-color: black;width: 100%;"></div>
+    </div>
+
+    <div class="accordion" id="accordionExample" >
+        <div class="card" style="background-color:rgb(52, 58, 64);">
+            <div class="card-header" id="headingOne" >
+                <h2 class="mb-0">
+                    <button class="btn btn-dark btn-block text-center border border-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                        通知管理
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show text-center" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+
+                <ul class="list-group text-center align-center" style="width: 80%;display:inline-block;vertical-align:top;">
+                    <li class="list-group-item "  style="margin-bottom: 5px;"><a href="${pageContext.request.contextPath}/msg/out.do" style="color: black;">发布通知</a></li>
+                    <li class="list-group-item"  style="margin-bottom: 5px;"><a href="${pageContext.request.contextPath}/msg/findAllMsg.do"  style="color: black;">通知列表</a></li>
+
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="card"style="background-color:rgb(52, 58, 64);">
+            <div class="card-header" id="headingTwo" >
+                <h2 class="mb-0">
+                    <button class="btn btn-dark btn-block text-center collapsed border border-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        用户管理
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse text-center" aria-labelledby="headingTwo" data-parent="#accordionExample">
+
+                <ul class="list-group text-center" style="width: 80%;display:inline-block;vertical-align:top;">
+                    <li class="list-group-item"  style="margin-bottom: 5px;"><a href="${pageContext.request.contextPath}/group/findAllGroupTwo.do"  style="color: black;">新增用户</a></li>
+                    <li class="list-group-item"  style="margin-bottom: 5px;"><a href="${pageContext.request.contextPath}/group/findAllGroup.do"  style="color: black;">编辑用户</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="card"style="background-color:rgb(52, 58, 64);">
+            <div class="card-header" id="headingThree" >
+                <h2 class="mb-0">
+                    <button class="btn btn-dark btn-block text-center collapsed border border-white" type="button" data-toggle="collapse"  aria-expanded="false">
+                        用户管理
+                    </button>
+                </h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <button class="btn btn-dark text-center" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Collapsible Group Item #1
+            </button>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <ul class="list-group">
+              <li class="list-group-item">asdasd</li>
+              <li class="list-group-item">asdasd</li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+
+
+
+</aside>
