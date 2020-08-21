@@ -7,63 +7,8 @@
     <title>Document</title>
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="pages_style.css">
 
-    <style>
-     @font-face{
-    font-family:'myFirstFont';
-    src:url('./fonts/ZaoZiGongFangYingLiHeiGuiTi-1.otf') format('truetype');
-}
-
-
-
-
-.aside-header{
-    height: 100px;
-    line-height: 100px;
-}
-.aside-header p{
-    font-family: 'myFirstFont';
-
-    text-decoration:none;
-    color:rgb(23, 55, 94);
-    display: block;
-    font-size: 32px;
-}
-.link-right {
-            width: 50px;
-            height: 20%;
-            border-right: solid #ACC0D8 1px;
-        }
-body{
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('imgs/back-dark.png');
-}
-
-
-
-.bread-nofirst{
-    font-family: 'myFirstFont';
-    font-size: 16px;
-
-color:rgb(23, 55, 94);
-}
-.first-page{
-    font-family: 'myFirstFont';
-    font-size: 16px;
-
-    color:rgb(80, 130,190);
-}
-.submit-button{
-    /* background-color: rgb(80,130, 190); */
-    /* background-image:liner-gradient(to right,red,black); */
-    background-image: linear-gradient(to right,rgb(23,55,94), rgb(80,130,190), rgb(30,70,120));
-    width: 70%;
-}
-
-
-</style>
 
 </head>
 
@@ -71,23 +16,34 @@ color:rgb(23, 55, 94);
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-<div class="test bread-nofirst ">
+<!-- <div class="test bread-nofirst ">
     当前位置:
 
 </div>
 <div class="test first-page">
     首页
-</div>
+</div> -->
 
-<div class="test" style="text-align: center;">
+<!-- <div class="test" style="text-align: center;">
     <button class="btn submit-button" >
         提交
     </button>
-</div>
+</div> -->
 
     <div class="container-fluid">
+        <div class="group_name">
+            工程组
+        </div>
+        <button id="btn1"  class="buttontest button_font button_click_color" style="width: 5%;height: 2%;">
+            aaaa
+        </button>
+
+        <button id="btn2" class="button_nostyle button_font button_noclick_color"  style="width: 5%;height: 2%;">
+            bbb
+        </button>
         <div class="row">
             <div class="col-12 col-md-2">
+
                 <aside class="main-sidebar aside">
                     <div class="text-center aside-header" >
                         <p href="#" class="first_menu ">
@@ -100,10 +56,9 @@ color:rgb(23, 55, 94);
                             <ul style="width: 100%;padding-inline-start: 0;">
                                 <li class="text-center">
 
-                                    <a class="center first_menu " role="button" data-toggle="collapse"
+                                    <a class="center first_menu first_menu_class" role="button" data-toggle="collapse"
                                         data-target="#collapseExample1" aria-expanded="false"
                                         aria-controls="collapseExample1" 
-                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125); margin-top: 5px;"
                                         >
                                         <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
 
@@ -115,8 +70,8 @@ color:rgb(23, 55, 94);
                                     <div class="collapse second_menu" id="collapseExample1">
                                         <ul style="padding-inline-start: 0;">
                                             <li class="text-center">
-                                                <a href="#" class=""
-                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                <a href="#" class="second_menu_class"
+                                                    >
                                                     发布通知
                                                 </a>
 
@@ -126,8 +81,8 @@ color:rgb(23, 55, 94);
 
                                             <li class="text-center">
                                                 <a href="#"
-                                                    class="" 
-                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                    class="second_menu_class" 
+                                                    >
                                                     我发布的
 
                                                 </a>
@@ -136,8 +91,8 @@ color:rgb(23, 55, 94);
 
                                             <li class="text-center">
                                                 <a href="#"
-                                                    class="" 
-                                                    style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                    class="second_menu_class" 
+                                                   >
                                                     收到通知
                                                 </a>
                                             </li>
@@ -146,10 +101,9 @@ color:rgb(23, 55, 94);
                                 </li>
 
                                 <li class="text-center">
-                                    <a class="center first_menu " role="button" data-toggle="collapse"
+                                    <a class="center first_menu first_menu_class" role="button" data-toggle="collapse"
                                         data-target="#collapseExample2" aria-expanded="false"
                                         aria-controls="collapseExample2" 
-                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
                                         >
                                         <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
 
@@ -163,8 +117,8 @@ color:rgb(23, 55, 94);
                                             <c:if test="${sessionScope.member.power ne 'p2'}">
                                                 <li class="text-center">
                                                     <a href="#"
-                                                        class=""
-                                                        style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                        class="second_menu_class"
+                                                        >
                                                         新增成员
 
                                                     </a>
@@ -172,8 +126,7 @@ color:rgb(23, 55, 94);
                                                 </li>
                                                 <li class="text-center">
                                                     <a href="#"
-                                                        class=""
-                                                        style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                        class="second_menu_class">
                                                         成员列表
 
                                                     </a>
@@ -183,7 +136,8 @@ color:rgb(23, 55, 94);
 
                                             <li class="text-center">
                                                 <a href="#"
-                                                style="color: rgb(80, 130, 190);font-family: 'myFirstFont';font-size: 18px;text-decoration: none;display: block;">
+                                                class="second_menu_class"
+                                                >
                                                 我的组员
                                                 </a>
 
@@ -196,8 +150,7 @@ color:rgb(23, 55, 94);
                                 </li>
                                 <li class="text-center">
                                     <a href="#"
-                                        class="center first_menu " role="button"
-                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
+                                        class="center first_menu first_menu_class" role="button"
                                         >
                                         <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
 
@@ -209,8 +162,7 @@ color:rgb(23, 55, 94);
                                 </li>
                                 <li class="text-center">
                                     <a href="${pageContext.request.contextPath}/member/logout.do"
-                                        class="center first_menu " role="button"
-                                        style="text-decoration: none;font-family: 'myFirstFont';font-size: 24px;display: block;color: rgb(30, 70, 125);margin-top: 10px;"
+                                        class="center first_menu first_menu_class" role="button"
                                         >
                                         <img src="imgs/line-dark.png" style="margin-right:8px;" alt="">
 
@@ -239,6 +191,30 @@ color:rgb(23, 55, 94);
         </div>
     </div>
 
+<script>
+    $("#btn1").click(function(){
+        $(this).addClass('buttontest');
+        $(this).removeClass('button_nostyle');
+        $(this).removeClass('button_noclick_color');
+        $(this).addClass("button_click_color");
+        $("#btn2").removeClass("buttontest");
+        $("#btn2").addClass("button_nostyle");
+        $("#btn2").removeClass('button_click_color');
+        $("#btn2").addClass("button_noclick_color");
+    });
+
+    $("#btn2").click(function(){
+        $(this).addClass('buttontest');
+        $(this).removeClass('button_nostyle');
+        $(this).addClass("button_click_color");
+        $(this).removeClass('button_noclick_color');
+        $(this).addClass("button_click_color");
+        $("#btn1").removeClass("buttontest");
+        $("#btn1").addClass("button_nostyle");
+        $("#btn1").removeClass('button_click_color');
+        $("#btn1").addClass("button_noclick_color");
+    })
+</script>
 
 </body>
 
