@@ -52,6 +52,8 @@
             background-image: url('imgs/back-dark.png');
             /* background-size: percentage; */
             background-attachment: fixed;
+            opacity:0.9;
+
         }
         
         
